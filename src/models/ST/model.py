@@ -1,0 +1,10 @@
+class model():
+    crypto_name = str()
+    crypto_symbol = str()
+    bot_buy = float()
+    bot_limit_buy = float()
+    bot_sell = float()
+    bot_amount = float()
+    bot_amount_limit = float()
+    is_real_account = bool()
+    bot_active = bool()
