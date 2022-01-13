@@ -6,5 +6,5 @@ class model():
     bot_sell = float()
     bot_amount = float()
     bot_amount_limit = float()
-    is_real_account = bool()
+    real_account = int()
     bot_active = bool()

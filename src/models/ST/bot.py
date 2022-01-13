@@ -11,7 +11,7 @@ def update_percent(id_update, in_percent):
     tbl_bot.update_one(query_where, values_update)
 
 def update(id_update, value_update):
-    query_where = {"_id" : ObjectId(id_update)}
+    query_where = {"_id" : ObjectId(id_update), "BotStatus": 1}
     tbl_bot.update_one(query_where, value_update)
 
 def get_all():

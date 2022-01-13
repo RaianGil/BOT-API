@@ -18,5 +18,5 @@ def run(api):
 
     @app.route('/api/ST/bot/<id>', methods=['PUT'])
     def update_st_bot_single(id):
-        return_msg = process.to_st_bot(id, request.form)
+        return_msg = process.to_st_bot(id, request.json)
         return json.dumps(return_msg)

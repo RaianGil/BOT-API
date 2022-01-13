@@ -7,9 +7,9 @@ def to_json(in_mongo):
     return dumps(json_return)
 
 def to_bool(in_bool):
-    return in_bool.lower() in confirm_list
+    return str(in_bool).lower() in confirm_list
     
 def to_bit(in_bool):
-    if(in_bool.lower() not in confirm_list):
+    if(str(in_bool).lower() not in confirm_list):
         return 0
     return 1    

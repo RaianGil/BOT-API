@@ -17,10 +17,15 @@ def run(api):
 
     @app.route('/api/ST/config/<id>', methods=['PUT'])
     def update_st_config_single(id):
-        return_msg = process.to_st_config(id, request.form)
+        return_msg = process.to_st_config(id, request.json)
+        return json.dumps(return_msg)
+
+    @app.route('/api/ST/config/<id>', methods=['DELETE'])
+    def disable_st_config(id):
+        return_msg = process.disable_st_config(id)
         return json.dumps(return_msg)
 
     @app.route('/api/ST/config', methods=['POST'])
     def add_st_config_single():
-        return_msg = process.new_st_config(request.form)
+        return_msg = process.new_st_config(request.json)
         return json.dumps(return_msg)
